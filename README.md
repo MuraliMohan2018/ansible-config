@@ -27,4 +27,13 @@ Configure mysql and sepup a test db
 Configure apache 
 
 `ansible-playbook -c local -i hosts apache.yml` 
- 
+
+Configure tomcat 
+
+`ansible-playbook -c local -i hosts tomcat.yml`
+
+**Single Step Configuration**
+
+```
+ansible-playbook -c local -i hosts site.yml
+``` 
