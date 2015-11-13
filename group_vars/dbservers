@@ -1,0 +1,7 @@
+# variables file used by dbservers group 
+
+mysqlservice: mysqld
+mysql_port: 3306
+dbname: test_db
+dbuser: hynt_root
+dbpassword: hynt_sscart 
