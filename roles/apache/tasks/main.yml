@@ -1,0 +1,16 @@
+---
+
+- name: apache configure   
+  yum: name="{{ item }}" state=latest
+  with_items:
+  - httpd
+  - httpd-devel
+  - mod_ssl
+  tags:
+  - install
+
+- name: Ensure httpd is running
+  service: name=httpd state=started enabled=yes
+
+
+

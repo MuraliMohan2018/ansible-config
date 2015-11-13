@@ -1,15 +1,9 @@
 ---
-# This playbook intall mysql and  deploys the application stack in this site.  
+# Main configuration file 
 
+- include: apache.yml
+- include: mysql.yml
 
-- name: Deploy MySQL and configure the databases
-  hosts: dbservers
-  remote_user: root
-  sudo: yes
-  roles:
-  - db
-  tags:
-  - mysql
 
 
 
