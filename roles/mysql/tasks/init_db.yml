@@ -1,0 +1,8 @@
+---
+# Setup default user and a database
+
+- name: Create Application Database
+  mysql_db: name={{ dbname }} state=present
+
+- name: Create Application DB User
+  mysql_user: name={{ dbuser }} password={{ dbpassword }} priv=*.*:ALL host='%' state=present

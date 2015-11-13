@@ -3,7 +3,7 @@ Software management configuration using ansible
 
 System: Red Hat Enterprise Linux Server release 7.1
 Softwares: 
-* Apache
+* Apache 
 * Tomcat
 * Mysql 
 
