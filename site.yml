@@ -7,4 +7,10 @@
   remote_user: root
   sudo: yes
   roles:
-    - db
+  - db
+  tags:
+  - mysql
+
+
+
+
