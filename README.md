@@ -20,7 +20,7 @@ wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
 rpm -ivh mysql-community-release-el7-5.noarch.rpm
 ```
 
-Configure mysql and sepup a test db
+Configure mysql and setup a test db
 
 `ansible-playbook -c local -i hosts mysql.yml` 
 
