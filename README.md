@@ -14,10 +14,12 @@ wget http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm
 sudo rpm -ivh epel-release-7-5.noarch.rpm
 ```
 
-Install mysql 
+Configure mysql and setup a test db
 
-`ansible-playbook -c local -i hosts site.yml` 
+`ansible-playbook -c local -i hosts mysql.yml` 
 
 
+Configure apache 
 
+`ansible-playbook -c local -i hosts apache.yml` 
  
