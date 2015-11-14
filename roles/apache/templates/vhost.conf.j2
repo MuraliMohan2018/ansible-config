@@ -1,19 +1,17 @@
-NameVirtualHost *:80
 
 <VirtualHost *:80>
-  ServerName {{ item.servername }}
-    DocumentRoot /var/www/html/{{ item.documentrootdir }}
-    ServerAdmin {{ item.serveradmin }}
-    ErrorLog logs/{{ item.errorlog }}-error_log
-    CustomLog logs/{{ item.customlog }}-access_log common
+  ServerName api.localhost 
 
-    <Directory /var/www/html/{{ item.documentrootdir }}>
-        Options None
-    </Directory>
+  ProxyRequests Off
+  ProxyPreserveHost On
 
-{% include "files/apache/mod_rewrite/" + item.documentrootdir + ".conf" ignore missing %}
+  ProxyPass /api http://localhost:8088/test/
+  ProxyPassReverse /api http://localhost:8088/test/
+ 
 
+  <Proxy *>
+    Require all granted
+  </Proxy> 
 </VirtualHost>
-
 
 
