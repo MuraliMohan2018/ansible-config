@@ -13,4 +13,5 @@
   service: name=httpd state=started enabled=yes
 
 
+- include: config_php.yml tags=php
 

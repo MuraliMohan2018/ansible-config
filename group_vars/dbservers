@@ -4,7 +4,8 @@
 mysqlservice: mysqld
 mysql_port: 3306
 dbname: test_db
-dbuser: hynt_root
-dbpassword: hynt_sscart@
+dbuser: admin
+dbpassword: admin
+
 
 
