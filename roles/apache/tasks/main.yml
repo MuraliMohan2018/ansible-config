@@ -15,8 +15,10 @@
 - name: Set SELinux httpd net connection
   command: sudo /usr/sbin/setsebool httpd_can_network_connect 1
 
-- include: config_php.yml tags=php
 
 #  Configure virtual host 
 
+
+- include: config_php.yml tags=php
+- include: wordpress.yml tags=wp
 
