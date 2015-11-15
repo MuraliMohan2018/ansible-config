@@ -13,8 +13,10 @@
   service: name=httpd state=started enabled=yes
 
 - name: Set SELinux httpd net connection
-  command: sudo /usr/sbin/setsebool httpd_can_network_connect 1
+  command: sudo /usr/sbin/setsebool -P  httpd_can_network_connect 1
 
+- name: Set SELinux write access 
+  command: sudo /usr/sbin/setsebool -P  httpd_unified 1
 
 #  Configure virtual host 
 

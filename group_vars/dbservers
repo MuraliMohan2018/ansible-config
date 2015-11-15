@@ -3,9 +3,12 @@
 
 mysqlservice: mysqld
 mysql_port: 3306
-dbname: test_db
-dbuser: admin
-dbpassword: admin
+mysql_data_dir: /var/lib/mysql/
+mysql_root_pass: root 
 
+dbuser: admin
+dbpassword: admin 
+
+dbname: test_db
 
 

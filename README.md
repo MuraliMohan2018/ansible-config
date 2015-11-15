@@ -25,22 +25,22 @@ rpm -ivh mysql-community-release-el7-5.noarch.rpm
 
 Configure mysql and setup a test db
 
-`ansible-playbook -c local -i hosts mysql.yml` 
+`ansible-playbook -i hosts mysql.yml` 
 
 Configure apache 
 
-`ansible-playbook -c local -i hosts apache.yml` 
+`ansible-playbook -i hosts apache.yml` 
 
 Only php
 
-`ansible-playbook -c local -i hosts apache.yml --tags "php"` 
+`ansible-playbook -i hosts apache.yml --tags "php"` 
 
 Configure tomcat 
 
-`ansible-playbook -c local -i hosts tomcat.yml`
+`ansible-playbook -i hosts tomcat.yml`
 
 **Single Step Configuration**
 
 ```
 ansible-playbook -c local -i hosts site.yml
-``` 
+```

@@ -1,12 +1,16 @@
 [mysqld]
-datadir=/var/lib/mysql
-socket=/var/lib/mysql/mysql.sock
+datadir={{ mysql_data_dir }} 
+socket={{ mysql_data_dir }}/mysql.sock
 user=mysql
-symbolic-links=0
 port={{ mysql_port }}
+
+symbolic-links=0
+innodb=OFF 
+default-storage-engine=myisam 
+default-tmp-storage-engine=myisam
 
 [mysqld_safe]
 log-error=/var/log/mysqld.log
-pid-file=/var/run/mysqld/mysqld.pid
+#pid-file={{ mysql_data_dir }}/mysqld.pid
 
 
