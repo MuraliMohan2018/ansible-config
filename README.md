@@ -4,8 +4,11 @@ Software management configuration using ansible
 System: Red Hat Enterprise Linux Server release 7.1
 Softwares: 
 * Apache 
-* Tomcat
 * Mysql 
+* PHP
+* Wordpress 
+* OpenJDK 7
+* Tomcat
 
 ## Enable EPEL 
 ```
@@ -27,6 +30,10 @@ Configure mysql and setup a test db
 Configure apache 
 
 `ansible-playbook -c local -i hosts apache.yml` 
+
+Only php
+
+`ansible-playbook -c local -i hosts apache.yml --tags "php"` 
 
 Configure tomcat 
 
