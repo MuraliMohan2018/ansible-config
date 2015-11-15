@@ -2,6 +2,7 @@
 Software management configuration using ansible 
 
 System: Red Hat Enterprise Linux Server release 7.1
+
 Softwares: 
 * Apache 
 * Mysql 
@@ -9,6 +10,8 @@ Softwares:
 * Wordpress 
 * OpenJDK 7
 * Tomcat
+
+Required: Ansible 
 
 ## Enable EPEL 
 ```
@@ -22,6 +25,8 @@ Add mysql in repos
 wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
 rpm -ivh mysql-community-release-el7-5.noarch.rpm
 ```
+
+Setup ansible: `yum install ansible` 
 
 Configure mysql and setup a test db
 
