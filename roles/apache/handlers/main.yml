@@ -1,7 +1,7 @@
 ---
 
 - name: restart httpd
-  service: name=httpd state=restated 
+  service: name=httpd state=restarted 
 
 
 

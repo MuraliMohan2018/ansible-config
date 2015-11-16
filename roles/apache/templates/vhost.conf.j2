@@ -1,3 +1,6 @@
+# Proxy for tomcat on apache 
+# apache 2.4 
+#  
 
 <VirtualHost *:80>
   ServerName api.localhost 
@@ -5,8 +8,8 @@
   ProxyRequests Off
   ProxyPreserveHost On
 
-  ProxyPass /api http://localhost:8088/test/
-  ProxyPassReverse /api http://localhost:8088/test/
+  ProxyPass /api http://localhost:{{ tomcat_port }}/test/
+  ProxyPassReverse /api http://localhost:{{ tomcat_port }}/test/
  
 
   <Proxy *>

@@ -19,8 +19,14 @@
   command: sudo /usr/sbin/setsebool -P  httpd_unified 1
 
 #  Configure virtual host 
+- name: Create virtual host 
+  template: src=vhost.conf.j2 dest=/etc/httpd/conf.d/vhost.conf
+  notify:
+  - restart httpd 
+  tags:
+  - vhost
 
 
 - include: config_php.yml tags=php
-- include: wordpress.yml tags=wp
+# - include: wordpress.yml tags=wp
 
